@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpd67x2mgwpmy"]
+
+[ext_resource type="Script" uid="uid://ddt8nd67bonoh" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="PackedScene" uid="uid://dwjayk6flhfou" path="res://bg.tscn" id="2_ouk20"]
+
+[node name="Menu" type="Node2D"]
+position = Vector2(11, -9)
+script = ExtResource("1_lti8b")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 359.0
+offset_top = 151.0
+offset_right = 694.0
+offset_bottom = 227.0
+theme_override_colors/font_disabled_color = Color(0.970687, 0.953906, 0.976566, 1)
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
+[node name="Play2" type="Button" parent="."]
+modulate = Color(0.97546, 0.983066, 0.995831, 1)
+offset_left = 362.0
+offset_top = 295.0
+offset_right = 697.0
+offset_bottom = 372.0
+theme_override_font_sizes/font_size = 50
+text = "QUIT"
+
+[node name="BG" parent="." instance=ExtResource("2_ouk20")]
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.987728, 0.991531, 0.997914, 1)
+offset_left = 868.0
+offset_top = 625.0
+offset_right = 1290.0
+offset_bottom = 719.0
+theme_override_font_sizes/font_size = 28
+text = "M. H.
+
+"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Play2" to="." method="_on_play_2_pressed"]
